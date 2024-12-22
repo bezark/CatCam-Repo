@@ -278,7 +278,7 @@ def index():
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Camera Server</title>
+        <title>Cat Cam</title>
         <style>
             * {
                 margin: 0;
@@ -341,7 +341,7 @@ def index():
         </style>
     </head>
     <body>
-        <h1>Camera Server</h1>
+        <h1>Cat Cam Living Room</h1>
         <div class="button-container">
             <a href="/recordings" class="button">View Recordings</a>
             <a href="/live" class="button">View Live Stream</a>
