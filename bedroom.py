@@ -34,6 +34,7 @@ def record_video(duration_seconds=240):  # 4 minutes
     print(f"Recording saved: {filename}")
 
 def schedule_recordings():
+    schedule.every().day.at("13:49").do(record_video)
     schedule.every().day.at("08:59").do(record_video)
     schedule.every().day.at("15:59").do(record_video)
     schedule.every().day.at("22:59").do(record_video)
@@ -113,7 +114,7 @@ def list_recordings():
             
             .back-button {
                 display: inline-block;
-                background-color: #3498db;
+                background-color: #3cb371;
                 color: white;
                 padding: 10px 20px;
                 border-radius: 8px;
@@ -226,7 +227,7 @@ def live_stream():
             
             .back-button {
                 display: inline-block;
-                background-color: #3498db;
+                background-color: #3cb371;
                 color: white;
                 padding: 10px 20px;
                 border-radius: 8px;
@@ -311,7 +312,7 @@ def index():
             }
             
             .button {
-                background-color: #3498db;
+                background-color: #3cb371;
                 color: white;
                 padding: 15px 25px;
                 border-radius: 8px;
