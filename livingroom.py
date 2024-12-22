@@ -34,7 +34,7 @@ def record_video(duration_seconds=240):  # 4 minutes
     print(f"Recording saved: {filename}")
 
 def schedule_recordings():
-    schedule.every().day.at("13:49").do(record_video)
+    schedule.every().day.at("14:00").do(record_video)
     schedule.every().day.at("08:59").do(record_video)
     schedule.every().day.at("15:59").do(record_video)
     schedule.every().day.at("22:59").do(record_video)

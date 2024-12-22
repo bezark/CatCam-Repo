@@ -33,23 +33,23 @@ def record_video(duration_seconds=240):  # 4 minutes
     out.release()
     print(f"Recording saved: {filename}")
 
-def schedule_recordings():
-    schedule.every().day.at("13:49").do(record_video)
-    schedule.every().day.at("08:59").do(record_video)
-    schedule.every().day.at("15:59").do(record_video)
-    schedule.every().day.at("22:59").do(record_video)
+# def schedule_recordings():
+#     schedule.every().day.at("13:49").do(record_video)
+#     schedule.every().day.at("08:59").do(record_video)
+#     schedule.every().day.at("15:59").do(record_video)
+#     schedule.every().day.at("22:59").do(record_video)
     
-    while True:
-        schedule.run_pending()
-        time.sleep(30)
+#     while True:
+#         schedule.run_pending()
+#         time.sleep(30)
 
-# Start scheduler in background thread
-scheduler_thread = Thread(target=schedule_recordings, daemon=True)
-scheduler_thread.start()
+# # Start scheduler in background thread
+# scheduler_thread = Thread(target=schedule_recordings, daemon=True)
+# scheduler_thread.start()
 
-@app.route('/recordings/<path:filename>')
-def serve_recording(filename):
-    return send_from_directory(RECORDING_DIR, filename, mimetype='video/mp4')
+# @app.route('/recordings/<path:filename>')
+# def serve_recording(filename):
+#     return send_from_directory(RECORDING_DIR, filename, mimetype='video/mp4')
 
 @app.route('/recordings')
 def list_recordings():
@@ -345,7 +345,6 @@ def index():
     <body>
         <h1>Cat Cam Bedroom</h1>
         <div class="button-container">
-            <a href="/recordings" class="button">View Recordings</a>
             <a href="/live" class="button">View Live Stream</a>
         </div>
     </body>
@@ -354,3 +353,8 @@ def index():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+
+
+
+    
+# <a href="/recordings" class="button">View Recordings</a>
